@@ -12,6 +12,19 @@ make start
 
 Go to http://localhost:5000. You should see a "Hello, World!" message.
 
+## Endpoints
+
+The API has the following endpoints available:
+| Endpoint       | Method   | Description   |
+|---             | ---      |---            |
+| `/`            | GET      | Hello World   |
+| `/items`       | GET      | GET All Items |
+| `/items/{id}`  | GET      | GET Item      |
+| `/items`       | POST     | Create Item   |
+| `/items/{id}`  | PUT      | Update Item   |
+| `/items/{id}`  | DELETE   | Delete Item   |
+
+Data is created, read, updated and deleted from the MongoDB database. 
 
 ## Tests
 Postman tests are included for the API endpoints in [tests/Example_API.postman_collection.json](tests/Example_API.postman_collection.json) and are run via GitHub Actions.
