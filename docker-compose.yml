@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+    # volumes:
+    #   - ./data/db:/data/db
+    networks:
+      - backend
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=admin
+    #   - MONGO_INITDB_ROOT_PASSWORD=admin
+    env_file: .env
+
+  api:
+    build: ./
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/src
+    networks:
+      - frontend
+      - backend
+    env_file: .env
+
+networks:
+  frontend:
+  backend:
