@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
 
-  mongodb:
+  db:
     image: mongo:5.0
     ports:
       - 27017:27017
@@ -25,6 +25,20 @@ services:
       - frontend
       - backend
     env_file: .env
+
+  postman:
+    image: postman/newman:alpine
+    command:
+      run ${POSTMAN_COLLECTION} -k
+      -r cli,json
+      --reporter-json-export="reports/api_test_report.json"
+    volumes:
+      - ./tests:/etc/newman
+    depends_on:
+      - "api"
+      - "db"
+    networks:
+      - backend
 
 networks:
   frontend:
