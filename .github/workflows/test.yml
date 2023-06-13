@@ -8,9 +8,9 @@ on:
       - main
 
 jobs:
-  environment:
-    name: tests
   test-api:
+    environment:
+      name: tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
