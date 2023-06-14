@@ -63,7 +63,7 @@
 			"response": []
 		},
 		{
-			"name": "POST Create Item",
+			"name": "CREATE Item",
 			"event": [
 				{
 					"listen": "test",
@@ -243,7 +243,7 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "http://api:5000"
+			"value": "http://localhost:5000"
 		}
 	]
 }
