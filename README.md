@@ -18,8 +18,8 @@ The API has the following endpoints available:
 | Endpoint       | Method   | Description   |
 |---             | ---      |---            |
 | `/`            | GET      | Hello World   |
-| `/items`       | GET      | GET All Items |
-| `/items/{id}`  | GET      | GET Item      |
+| `/items`       | GET      | Get All Items |
+| `/items/{id}`  | GET      | Get Item      |
 | `/items`       | POST     | Create Item   |
 | `/items/{id}`  | PUT      | Update Item   |
 | `/items/{id}`  | DELETE   | Delete Item   |
@@ -31,7 +31,7 @@ Postman tests are included for the API endpoints in [tests/Example_API.postman_c
 
 ![Postman tests](docs/images/postman.png)
 
-They can be run locally using:
+Tests can be run locally using:
 ```bash
 make tests
 ```

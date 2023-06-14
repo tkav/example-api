@@ -29,7 +29,8 @@ services:
   postman:
     image: postman/newman:alpine
     command:
-      run ${POSTMAN_COLLECTION} -k
+      run ${POSTMAN_COLLECTION} -k 
+      --env-var "base_url=${API_BASE_URL}"
       -r cli,json
       --reporter-json-export="reports/api_test_report.json"
     volumes:
