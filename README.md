@@ -1,5 +1,13 @@
 # API Example
 Example REST API using Python (Flask), MongoDB and Docker.
+Includes Postman tests and GitHub Action workflow.
+
+Click here to read my blog on [Creating an API using Flask, MongoDB and Docker](https://blog.tkav.dev/create-an-api-using-flask-mongodb-and-docker)
+
+
+[![Blog Post](docs/images/blog-post.jpg)](https://blog.tkav.dev/create-an-api-using-flask-mongodb-and-docker)
+
+## Diagram
 
 ![API Example](docs/images/API-Example.drawio.png)
 
